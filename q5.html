@@ -1,74 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Calculator</title>
-
-    <script>
-        function calculate(operation) {
-
-            var num1 = parseFloat(document.getElementById("num1").value);
-            var num2 = parseFloat(document.getElementById("num2").value);
-            var result;
-
-            switch(operation) {
-
-                case 'add':
-                    result = num1 + num2;
-                    break;
-
-                case 'sub':
-                    result = num1 - num2;
-                    break;
-
-                case 'mul':
-                    result = num1 * num2;
-                    break;
-
-                case 'div':
-                    if (num2 == 0) {
-                        result = "Cannot divide by zero";
-                    } else {
-                        result = num1 / num2;
-                    }
-                    break;
-            }
-
-            document.getElementById("result").innerHTML = "Result: " + result;
-        }
-    </script>
-
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial;
-        }
-
-        input, button {
-            padding: 8px;
-            margin: 5px;
-        }
-    </style>
-
+    <title>Line Break and Horizontal Rule Example</title>
 </head>
 <body>
 
     <!-- Student Details -->
-    <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
-    <p><strong>Reg No:</strong> 24BCE2604</p>
+    <p><strong>Name:</strong>K.MOHAMMED ARIF</p>
+    <p><strong>Reg No:</strong>24BCE2604</p>
     <hr>
 
-    <h2>Simple Calculator</h2>
+    <h1>Line Break and Horizontal Line Example</h1>
 
-    <input type="number" id="num1" step="any" placeholder="Enter First Number">
-    <input type="number" id="num2" step="any" placeholder="Enter Second Number">
-    <br>
+    <!-- Paragraph with two line breaks -->
+    <p>
+        This is the first line of the paragraph.<br>
+        This is the second line after one line break.<br>
+        This is the third line after two line breaks.
+    </p>
 
-    <button onclick="calculate('add')">Add</button>
-    <button onclick="calculate('sub')">Subtract</button>
-    <button onclick="calculate('mul')">Multiply</button>
-    <button onclick="calculate('div')">Divide</button>
+    <!-- Horizontal Line -->
+    <hr>
 
-    <p id="result"></p>
+    <!-- Another Paragraph -->
+    <p>
+        This is another paragraph displayed after the horizontal line.
+    </p>
 
 </body>
 </html>

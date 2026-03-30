@@ -1,75 +1,176 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Product Order Form</title>
-
-    <script>
-        function calculateTotal() {
-
-            var items = document.querySelectorAll('input[type="checkbox"]:checked');
-            var total = 0;
-
-            for (var item of items) {
-                total += parseFloat(item.value);
-            }
-
-            document.getElementById("output").innerHTML =
-                "Total Price: ₹" + total;
-        }
-    </script>
-
-    <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-        }
-
-        fieldset {
-            margin: 10px;
-            padding: 10px;
-        }
-
-        button {
-            padding: 10px;
-            margin: 10px;
-        }
-    </style>
-
+    <title>Indian Governance and State Information Portal</title>
 </head>
 <body>
+<!-- Student Details -->
+<p><strong>Name:</strong>K.MOHAMMED ARIF</p>
+<p><strong>Reg No:</strong>24BCE2604</p>
 
-    <!-- Student Details -->
-    <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
-    <p><strong>Reg No:</strong> 24BCE2604</p>
-    <hr>
+<h1 align="center">Indian Governance and State Information Portal</h1>
+<hr>
 
-    <h2>Product Order Form</h2>
+<!-- ================= PRESIDENT ================= -->
 
-    <form>
+<h2>President of India</h2>
 
-        <fieldset>
-            <legend>Electronics</legend>
-            <input type="checkbox" value="1000"> Headphones (₹1000)<br>
-            <input type="checkbox" value="2000"> Speaker (₹2000)
-        </fieldset>
+<table border="1" width="80%">
+<tr>
+    <th>Name</th>
+    <th>Year Elected</th>
+    <th>Description</th>
+    <th>Official Email</th>
+</tr>
+<tr>
+    <td>Droupadi Murmu</td>
+    <td>2022</td>
+    <td>She is the 15th President of India and the first tribal woman to hold the office.</td>
+    <td>presidentofindia@rb.nic.in</td>
+</tr>
+</table>
 
-        <fieldset>
-            <legend>Clothing</legend>
-            <input type="checkbox" value="1500"> Jacket (₹1500)<br>
-            <input type="checkbox" value="800"> T-Shirt (₹800)
-        </fieldset>
+<br>
 
-        <fieldset>
-            <legend>Accessories</legend>
-            <input type="checkbox" value="500"> Watch (₹500)<br>
-            <input type="checkbox" value="300"> Cap (₹300)
-        </fieldset>
+<!-- ================= PRIME MINISTER ================= -->
 
-        <button type="button" onclick="calculateTotal()">Calculate Total</button>
+<h2>Prime Minister of India</h2>
 
-    </form>
+<table border="1" width="80%">
+<tr>
+    <th>Name</th>
+    <th>Year Assumed Office</th>
+    <th>Description</th>
+    <th>Official Email</th>
+</tr>
+<tr>
+    <td>Narendra Modi</td>
+    <td>2014</td>
+    <td>He is the current Prime Minister of India and leads the Government of India.</td>
+    <td>pmindia@gov.in</td>
+</tr>
+</table>
 
-    <h3 id="output"></h3>
+<br>
+
+<!-- ================= CHIEF MINISTERS ================= -->
+
+<h2>Chief Ministers of Selected Indian States</h2>
+
+<table border="1" width="80%">
+<tr>
+    <th>State</th>
+    <th>Chief Minister</th>
+</tr>
+<tr>
+    <td><a href="#telangana">Telangana</a></td>
+    <td>A. Revanth Reddy</td>
+</tr>
+<tr>
+    <td><a href="#karnataka">Karnataka</a></td>
+    <td>Siddaramaiah</td>
+</tr>
+<tr>
+    <td><a href="#tamilnadu">Tamil Nadu</a></td>
+    <td>M. K. Stalin</td>
+</tr>
+</table>
+
+<hr>
+
+<!-- ================= TELANGANA ================= -->
+
+<h2 id="telangana">Telangana</h2>
+
+<h3>Major Projects</h3>
+<ul>
+    <li>Kaleshwaram Lift Irrigation Project</li>
+    <li>Mission Bhagiratha</li>
+</ul>
+
+<h3>Ongoing Developments</h3>
+<ul>
+    <li>IT Infrastructure Expansion</li>
+    <li>Industrial Corridors</li>
+</ul>
+
+<h3>Importance of the State</h3>
+<ul>
+    <li>Major IT Hub (Hyderabad)</li>
+    <li>Rich Cultural Heritage</li>
+</ul>
+
+<h3>Tourist Attractions</h3>
+<ul>
+    <li>Charminar</li>
+    <li>Golconda Fort</li>
+</ul>
+
+<a href="#">Back to Top</a>
+
+<hr>
+
+<!-- ================= KARNATAKA ================= -->
+
+<h2 id="karnataka">Karnataka</h2>
+
+<h3>Major Projects</h3>
+<ul>
+    <li>Bangalore Metro</li>
+    <li>Smart City Projects</li>
+</ul>
+
+<h3>Ongoing Developments</h3>
+<ul>
+    <li>Technology Parks</li>
+    <li>Industrial Development</li>
+</ul>
+
+<h3>Importance of the State</h3>
+<ul>
+    <li>Silicon Valley of India</li>
+    <li>Historical Importance</li>
+</ul>
+
+<h3>Tourist Attractions</h3>
+<ul>
+    <li>Mysore Palace</li>
+    <li>Hampi</li>
+</ul>
+
+<a href="#">Back to Top</a>
+
+<hr>
+
+<!-- ================= TAMIL NADU ================= -->
+
+<h2 id="tamilnadu">Tamil Nadu</h2>
+
+<h3>Major Projects</h3>
+<ul>
+    <li>Chennai Metro Rail</li>
+    <li>Industrial Corridor Projects</li>
+</ul>
+
+<h3>Ongoing Developments</h3>
+<ul>
+    <li>Renewable Energy Projects</li>
+    <li>Smart Cities Initiative</li>
+</ul>
+
+<h3>Importance of the State</h3>
+<ul>
+    <li>Automobile Manufacturing Hub</li>
+    <li>Rich Cultural Heritage</li>
+</ul>
+
+<h3>Tourist Attractions</h3>
+<ul>
+    <li>Meenakshi Temple</li>
+    <li>Ooty Hill Station</li>
+</ul>
+
+<a href="#">Back to Top</a>
 
 </body>
 </html>

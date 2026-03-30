@@ -1,58 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Checkbox Selection Counter</title>
-
-    <script>
-        function countSelected() {
-
-            var subjects = document.getElementsByName("subject");
-            var selected = [];
-            var count = 0;
-
-            for (var i = 0; i < subjects.length; i++) {
-                if (subjects[i].checked) {
-                    selected.push(subjects[i].value);
-                    count++;
-                }
-            }
-
-            document.getElementById("output").innerHTML =
-                "Selected Count: " + count + "<br>" +
-                "Subjects: " + selected.join(", ");
-        }
-    </script>
-
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial;
-        }
-
-        input, button {
-            margin: 10px;
-        }
-    </style>
-
+    <title>HTML Table with Dummy Data</title>
 </head>
 <body>
 
     <!-- Student Details -->
-    <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
-    <p><strong>Reg No:</strong> 24BCE2604</p>
+    <p><strong>Name:</strong>K.MOHAMMED ARIF</p>
+    <p><strong>Reg No:</strong>24BCE2604</p>
     <hr>
 
-    <h2>Select Subjects</h2>
+    <h2 align="center">Student Details Table</h2>
 
-    <input type="checkbox" name="subject" value="Math"> Math
-    <input type="checkbox" name="subject" value="Science"> Science
-    <input type="checkbox" name="subject" value="English"> English
-    <input type="checkbox" name="subject" value="Computer"> Computer
-    <br>
+    <!-- Table Creation -->
+    <table border="1" align="center">
 
-    <button onclick="countSelected()">Show Selection</button>
+        <!-- First Row (Table Heading) -->
+        <tr style="background-color: lightgreen; font-weight: bold;">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Course</th>
+        </tr>
 
-    <p id="output"></p>
+        <!-- Second Row (Data) -->
+        <tr>
+            <td>101</td>
+            <td>Rahul</td>
+            <td>Web Development</td>
+        </tr>
+
+        <!-- Third Row (Data) -->
+        <tr>
+            <td>102</td>
+            <td>Anjali</td>
+            <td>Python Programming</td>
+        </tr>
+
+    </table>
 
 </body>
 </html>

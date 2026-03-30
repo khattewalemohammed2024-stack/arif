@@ -1,52 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Multiplication Table (Do-While)</title>
-
-    <script>
-        function printTable() {
-
-            var n = parseInt(document.getElementById("num").value);
-            var i = 1;
-            var result = "";
-
-            do {
-                result += n + " x " + i + " = " + (n * i) + "<br>";
-                i++;
-            } while (i <= 10);
-
-            document.getElementById("output").innerHTML = result;
-        }
-    </script>
-
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial;
-        }
-
-        input, button {
-            padding: 8px;
-            margin: 5px;
-        }
-    </style>
-
+    <title>Student Eligibility Rules</title>
 </head>
 <body>
 
     <!-- Student Details -->
     <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
-    <p><strong>Reg No:</strong> 24BCE2604</p>
+    <p><strong>Reg No:</strong>24BCE2604</p>
     <hr>
 
-    <h2>Multiplication Table using Do-While Loop</h2>
+    <!-- Section Element -->
+    <section>
+        <h2>Internal Assessment Eligibility Rules</h2>
 
-    <input type="number" id="num" placeholder="Enter Number">
-    <br>
-
-    <button onclick="printTable()">Generate Table</button>
-
-    <p id="output"></p>
+        <p>
+            A student is eligible for the internal assessment only if the attendance 
+            is greater than 75% (&gt; 75%), the assignment count is less than 5 
+            (&lt; 5), and the internal score is less than or equal to 40 
+            (&le; 40).
+        </p>
+    </section>
 
 </body>
 </html>

@@ -1,56 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Area of Rectangle</title>
-
-    <script>
-        function calculateArea() {
-
-            // Get user input
-            var length = document.getElementById("length").value;
-            var width = document.getElementById("width").value;
-
-            // Integer calculation
-            var areaInt = parseInt(length) * parseInt(width);
-
-            // Float calculation
-            var areaFloat = parseFloat(length) * parseFloat(width);
-
-            document.getElementById("result").innerHTML =
-                "Integer Area: " + areaInt + "<br>" +
-                "Float Area: " + areaFloat;
-        }
-    </script>
-
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial;
-        }
-
-        input, button {
-            padding: 8px;
-            margin: 5px;
-        }
-    </style>
-
+    <title>Text Formatting Tags Example</title>
 </head>
 <body>
 
     <!-- Student Details -->
-    <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
-    <p><strong>Reg No:</strong> 24BCE2604</p>
+    <p><strong>Name:</strong>K.MOHAMMED ARIF</p>
+    <p><strong>Reg No:</strong>24BCE2604</p>
     <hr>
 
-    <h2>Rectangle Area Calculator</h2>
+    <h1>Text Formatting Tags</h1>
 
-    <input type="text" id="length" placeholder="Enter Length">
-    <input type="text" id="width" placeholder="Enter Width">
-    <br>
+    <!-- Bold -->
+    <p><b>This sentence is written using the bold tag.</b></p>
 
-    <button onclick="calculateArea()">Calculate Area</button>
+    <!-- Italic -->
+    <p><i>This sentence is written using the italic tag.</i></p>
 
-    <p id="result"></p>
+    <!-- Underline -->
+    <p><u>This sentence is written using the underline tag.</u></p>
+
+    <!-- Emphasized -->
+    <p><em>This sentence is written using the emphasized tag.</em></p>
+
+    <!-- Strong -->
+    <p><strong>This sentence is written using the strong tag.</strong></p>
 
 </body>
 </html>
