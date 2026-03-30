@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Generator</title>
+
+    <script>
+        function generateEmail(form) {
+            var fname = form.elements["fname"].value;
+            var lname = form.elements["lname"].value;
+
+            var email = fname + "." + lname + "@park.edu";
+
+            document.getElementById("result").innerHTML = email;
+
+            form.reset();
+            form.elements["fname"].focus();
+        }
+    </script>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Student Details -->
+    <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
+    <p><strong>Reg No:</strong> 24BCE2604</p>
+    <hr>
+
+    <h2>Email Address Generator</h2>
+
+    <form onsubmit="generateEmail(this); return false;">
+        <input type="text" name="fname" placeholder="First Name" required>
+        <input type="text" name="lname" placeholder="Last Name" required>
+        <br>
+        <button type="submit">Generate Email</button>
+    </form>
+
+    <h3 id="result"></h3>
+
+</body>
+</html>

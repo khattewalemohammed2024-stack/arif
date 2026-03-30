@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overlapping Image Gallery</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        .container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: auto;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            cursor: pointer;
+            border: 2px solid black;
+        }
+
+        #img1 { top: 20px; left: 20px; }
+        #img2 { top: 60px; left: 80px; }
+        #img3 { top: 100px; left: 140px; }
+    </style>
+
+    <script>
+        var topIndex = 1; // global variable
+
+        function bringToFront(element) {
+            element.style.zIndex = ++topIndex;
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- Student Details -->
+    <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
+    <p><strong>Reg No:</strong> 24BCE2604</p>
+    <hr>
+
+    <h2>Overlapping Image Gallery</h2>
+
+    <div class="container">
+        <img src="c:\Users\moham\OneDrive\Pictures\4K-Red-HD-Background.jpg" onclick="bringToFront(this)">
+        <img src="c:\Users\moham\OneDrive\Pictures\Screenshots\Screenshot 2026-02-19 223600.png" onclick="bringToFront(this)">
+        <img src="" onclick="bringToFront(this)">
+    </div>
+
+</body>
+</html>

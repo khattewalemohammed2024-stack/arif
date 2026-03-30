@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Order Form</title>
+
+    <script>
+        function calculateTotal() {
+
+            var items = document.querySelectorAll('input[type="checkbox"]:checked');
+            var total = 0;
+
+            for (var item of items) {
+                total += parseFloat(item.value);
+            }
+
+            document.getElementById("output").innerHTML =
+                "Total Price: ₹" + total;
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        fieldset {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Student Details -->
+    <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
+    <p><strong>Reg No:</strong> 24BCE2604</p>
+    <hr>
+
+    <h2>Product Order Form</h2>
+
+    <form>
+
+        <fieldset>
+            <legend>Electronics</legend>
+            <input type="checkbox" value="1000"> Headphones (₹1000)<br>
+            <input type="checkbox" value="2000"> Speaker (₹2000)
+        </fieldset>
+
+        <fieldset>
+            <legend>Clothing</legend>
+            <input type="checkbox" value="1500"> Jacket (₹1500)<br>
+            <input type="checkbox" value="800"> T-Shirt (₹800)
+        </fieldset>
+
+        <fieldset>
+            <legend>Accessories</legend>
+            <input type="checkbox" value="500"> Watch (₹500)<br>
+            <input type="checkbox" value="300"> Cap (₹300)
+        </fieldset>
+
+        <button type="button" onclick="calculateTotal()">Calculate Total</button>
+
+    </form>
+
+    <h3 id="output"></h3>
+
+</body>
+</html>

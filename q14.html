@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Styling Application</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .smallcaps {
+            font-variant: small-caps;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px;
+        }
+
+        fieldset {
+            margin: 10px;
+        }
+    </style>
+
+    <script>
+        function applyStyle(style) {
+            document.getElementById("message").className = style;
+        }
+
+        function applyMultiple() {
+            document.getElementById("message").className = "bold italic smallcaps";
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- Student Details -->
+    <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
+    <p><strong>Reg No:</strong> 24BCE2604</p>
+    <hr>
+
+    <h2>Text Styling Application</h2>
+
+    <p id="message">This is a sample message.</p>
+
+    <fieldset>
+        <legend>Apply Styles</legend>
+
+        <button onclick="applyStyle('bold')">Bold</button>
+        <button onclick="applyStyle('italic')">Italic</button>
+        <button onclick="applyStyle('smallcaps')">Small Caps</button>
+        <button onclick="applyMultiple()">All Styles</button>
+
+    </fieldset>
+
+</body>
+</html>

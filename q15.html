@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Font Customization Tool</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        fieldset {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        input {
+            margin: 5px;
+        }
+
+        #text {
+            padding: 20px;
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+    </style>
+
+    <script>
+        function updateStyle() {
+
+            var size = document.getElementById("size").value;
+            var color = document.getElementById("color").value;
+            var bg = document.getElementById("bg").value;
+
+            var text = document.getElementById("text");
+
+            text.style.fontSize = size + "px";
+            text.style.color = color;
+            text.style.backgroundColor = bg;
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- Student Details -->
+    <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
+    <p><strong>Reg No:</strong> 24BCE2604</p>
+    <hr>
+
+    <h2>Font Customization Tool</h2>
+
+    <fieldset>
+        <legend>Customize Text</legend>
+
+        Font Size:
+        <input type="range" id="size" min="10" max="50" onchange="updateStyle()"><br>
+
+        Text Color:
+        <input type="color" id="color" onchange="updateStyle()"><br>
+
+        Background Color:
+        <input type="color" id="bg" onchange="updateStyle()"><br>
+
+    </fieldset>
+
+    <div id="text">
+        This is customizable text.
+    </div>
+
+</body>
+</html>

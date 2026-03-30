@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Print Numbers using While Loop</title>
+
+    <script>
+        function printNumbers() {
+
+            var n = parseInt(document.getElementById("num").value);
+            var i = 1;
+            var result = "";
+
+            while (i <= n) {
+                result += i + " ";
+                i++;
+            }
+
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Student Details -->
+    <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
+    <p><strong>Reg No:</strong> 24BCE2604</p>
+    <hr>
+
+    <h2>Print Numbers from 1 to N</h2>
+
+    <input type="number" id="num" placeholder="Enter N">
+    <br>
+
+    <button onclick="printNumbers()">Print</button>
+
+    <p id="output"></p>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkbox Selection Counter</title>
+
+    <script>
+        function countSelected() {
+
+            var subjects = document.getElementsByName("subject");
+            var selected = [];
+            var count = 0;
+
+            for (var i = 0; i < subjects.length; i++) {
+                if (subjects[i].checked) {
+                    selected.push(subjects[i].value);
+                    count++;
+                }
+            }
+
+            document.getElementById("output").innerHTML =
+                "Selected Count: " + count + "<br>" +
+                "Subjects: " + selected.join(", ");
+        }
+    </script>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        input, button {
+            margin: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Student Details -->
+    <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
+    <p><strong>Reg No:</strong> 24BCE2604</p>
+    <hr>
+
+    <h2>Select Subjects</h2>
+
+    <input type="checkbox" name="subject" value="Math"> Math
+    <input type="checkbox" name="subject" value="Science"> Science
+    <input type="checkbox" name="subject" value="English"> English
+    <input type="checkbox" name="subject" value="Computer"> Computer
+    <br>
+
+    <button onclick="countSelected()">Show Selection</button>
+
+    <p id="output"></p>
+
+</body>
+</html>

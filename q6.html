@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information System</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+        var students = []; // Global array
+
+        function addStudent(form) {
+
+            var student = {
+                name: form.name.value,
+                reg: form.reg.value,
+                dept: form.dept.value,
+
+                display: function() {
+                    return this.name + " - " + this.reg + " - " + this.dept;
+                }
+            };
+
+            students.push(student);
+
+            displayTable();
+
+            form.reset();
+            form.name.focus();
+        }
+
+        function displayTable() {
+
+            var table = "<tr><th>Name</th><th>Reg No</th><th>Department</th></tr>";
+
+            for (var i = 0; i < students.length; i++) {
+                table += "<tr><td>" + students[i].name + "</td>" +
+                         "<td>" + students[i].reg + "</td>" +
+                         "<td>" + students[i].dept + "</td></tr>";
+            }
+
+            document.getElementById("output").innerHTML = table;
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- Student Details -->
+    <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
+    <p><strong>Reg No:</strong> 24BCE2604</p>
+    <hr>
+
+    <h2>Student Information System</h2>
+
+    <form onsubmit="addStudent(this); return false;">
+        <input type="text" name="name" placeholder="Student Name" required>
+        <input type="text" name="reg" placeholder="Reg No" required>
+        <input type="text" name="dept" placeholder="Department" required>
+        <br>
+        <button type="submit">Add Student</button>
+    </form>
+
+    <table id="output"></table>
+
+</body>
+</html>
