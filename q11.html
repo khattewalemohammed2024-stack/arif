@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Interest Calculator</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+    </style>
+
+    <script>
+        function calculateSI(p, r, t) {
+            return (p * r * t) / 100;
+        }
+
+        function displaySI() {
+
+            var p = parseFloat(document.getElementById("p").value);
+            var r = parseFloat(document.getElementById("r").value);
+            var t = parseFloat(document.getElementById("t").value);
+
+            var result = calculateSI(p, r, t);
+
+            document.getElementById("output").innerHTML =
+                "Simple Interest: " + result;
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- Student Details -->
+    <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
+    <p><strong>Reg No:</strong> 24BCE2604</p>
+    <hr>
+
+    <h2>Simple Interest Calculator</h2>
+
+    <input type="number" id="p" placeholder="Principal">
+    <input type="number" id="r" placeholder="Rate">
+    <input type="number" id="t" placeholder="Time">
+    <br>
+
+    <button onclick="displaySI()">Calculate</button>
+
+    <p id="output"></p>
+
+</body>
+</html>
