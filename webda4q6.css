@@ -1,0 +1,25 @@
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.card {
+  margin-top: 20px;
+  background: lightblue;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
