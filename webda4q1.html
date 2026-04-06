@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>React Welcome App</title>
+
+    <!-- React CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Student Details -->
+    <p><strong>Name:</strong> K.MOHAMMED ARIF</p>
+    <p><strong>Reg No:</strong> 24BCE2604</p>
+    <hr>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        // Functional Component
+        function Welcome(props) {
+            return (
+                <div style={{textAlign:"center", fontFamily:"Arial"}}>
+                    <h2>Hello {props.name} from {props.city}!</h2>
+                    <p>Welcome to React learning. This is a personalized message.</p>
+                </div>
+            );
+        }
+
+        // Render using ReactDOM
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<Welcome name="Arif" city="Vellore" />);
+
+    </script>
+
+</body>
+</html>
